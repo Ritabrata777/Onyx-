@@ -108,9 +108,6 @@ BUNDLER_URL=https://api.pimlico.io/v2/polygon-amoy/rpc?apikey=YOUR_KEY
 # Paymaster
 PAYMASTER_URL=https://api.pimlico.io/v2/polygon-amoy/rpc?apikey=YOUR_KEY
 
-# Contract Addresses
-ENTRYPOINT_ADDRESS=0x5FF137D4b0FDCD49DcA30c7CF57E578a026d2789
-
 # Backend
 JWT_SECRET=your_secret
 PORT=3001
