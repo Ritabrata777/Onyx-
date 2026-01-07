@@ -1,0 +1,28 @@
+{
+  "name": "onyx-backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@simplewebauthn/server": "9.0.3",
+    "cors": "2.8.5",
+    "dotenv": "16.4.1",
+    "express": "^4.22.1",
+    "next": "14.2.35",
+    "permissionless": "0.1.18",
+    "uuid": "9.0.1",
+    "viem": "^2.43.5"
+  },
+  "devDependencies": {
+    "@types/cors": "2.8.17",
+    "@types/express": "4.17.21",
+    "@types/uuid": "9.0.7",
+    "tsx": "^4.21.0",
+    "typescript": "5.3.3"
+  }
+}

@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 226, 232, 240;
+  --background-start-rgb: 15, 15, 35;
+  --background-end-rgb: 26, 26, 46;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+    to bottom,
+    rgb(var(--background-start-rgb)),
+    rgb(var(--background-end-rgb))
+  );
+  min-height: 100vh;
+  min-height: 100dvh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Safe area for notched phones */
+@supports (padding: max(0px)) {
+  body {
+    padding-left: max(0px, env(safe-area-inset-left));
+    padding-right: max(0px, env(safe-area-inset-right));
+    padding-bottom: max(0px, env(safe-area-inset-bottom));
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary to-secondary text-white font-semibold py-4 px-6 rounded-2xl 
+           hover:opacity-90 active:scale-[0.98] transition-all duration-200 shadow-lg shadow-primary/25
+           text-base min-h-[52px] touch-manipulation;
+  }
+  
+  .btn-secondary {
+    @apply bg-surface border border-primary/30 text-text font-semibold py-4 px-6 rounded-2xl 
+           hover:border-primary/60 active:scale-[0.98] transition-all duration-200
+           text-base min-h-[52px] touch-manipulation;
+  }
+  
+  .card {
+    @apply bg-surface/80 backdrop-blur-sm rounded-3xl p-5 border border-white/5 shadow-xl;
+  }
+  
+  .input-field {
+    @apply w-full bg-background border border-white/10 rounded-2xl px-4 py-4 text-text text-base
+           focus:outline-none focus:border-primary/50 focus:ring-2 focus:ring-primary/20 
+           transition-all placeholder:text-text/40 min-h-[52px];
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbar but keep functionality */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
