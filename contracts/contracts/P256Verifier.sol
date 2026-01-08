@@ -101,10 +101,9 @@ contract P256Verifier {
         uint256 u2 = mulmod(r, sInv, N);
 
         // Compute point R = u1*G + u2*Q
-        (uint256 rx, ) = _ecAdd(
-            _ecMul(GX, GY, u1),
-            _ecMul(x, y, u2)
-        );
+        (uint256 p1x, uint256 p1y) = _ecMul(GX, GY, u1);
+        (uint256 p2x, uint256 p2y) = _ecMul(x, y, u2);
+        (uint256 rx, ) = _ecAddPoints(p1x, p1y, p2x, p2y);
 
         // Verify r == rx mod n
         return r == (rx % N);
@@ -172,15 +171,7 @@ contract P256Verifier {
 
     /**
      * @notice Elliptic curve point addition
-     */
-    function _ecAdd(
-        (uint256, uint256) memory p1,
-        (uint256, uint256) memory p2
-    ) internal pure returns (uint256, uint256) {
-        return _ecAddPoints(p1.0, p1.1, p2.0, p2.1);
-    }
-
-    function _ecAddPoints(
+     */    function _ecAddPoints(
         uint256 x1,
         uint256 y1,
         uint256 x2,

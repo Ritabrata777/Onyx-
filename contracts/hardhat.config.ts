@@ -15,6 +15,11 @@ const config: HardhatUserConfig = {
     },
   },
   networks: {
+    amoy: {
+      url: process.env.AMOY_RPC_URL || "https://rpc-amoy.polygon.technology",
+      accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
+      chainId: 80002,
+    },
     polygon: {
       url: process.env.POLYGON_RPC_URL || "",
       accounts: process.env.DEPLOYER_PRIVATE_KEY ? [process.env.DEPLOYER_PRIVATE_KEY] : [],
