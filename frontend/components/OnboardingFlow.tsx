@@ -50,7 +50,7 @@ export default function OnboardingFlow() {
         <div className="text-center max-w-sm w-full">
           <div className="text-7xl mb-8">🚄</div>
           <h1 className="text-4xl font-bold mb-3 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-            InvisibleRail
+            Onyx
           </h1>
           <p className="text-text/60 mb-10 text-lg leading-relaxed">
             Pay with stablecoins as easily as UPI. No seed phrases, no gas fees.
@@ -76,8 +76,8 @@ export default function OnboardingFlow() {
   if (step === 'create') {
     return (
       <div className="flex flex-col min-h-[100dvh] p-6">
-        <button 
-          onClick={() => setStep('welcome')} 
+        <button
+          onClick={() => setStep('welcome')}
           className="text-text/50 mb-6 self-start px-2 py-1 -ml-2 rounded-lg hover:bg-white/5 active:bg-white/10"
         >
           ← Back
@@ -136,8 +136,8 @@ export default function OnboardingFlow() {
   // Login step
   return (
     <div className="flex flex-col min-h-[100dvh] p-6">
-      <button 
-        onClick={() => setStep('welcome')} 
+      <button
+        onClick={() => setStep('welcome')}
         className="text-text/50 mb-6 self-start px-2 py-1 -ml-2 rounded-lg hover:bg-white/5 active:bg-white/10"
       >
         ← Back

@@ -69,7 +69,7 @@ export default function AddNetworkQR({ onClose }: Props) {
       <div className="card max-w-sm w-full max-h-[90vh] overflow-y-auto">
         <div className="flex justify-between items-center mb-4">
           <h3 className="font-bold text-lg">Fund Your Wallet</h3>
-          <button 
+          <button
             onClick={onClose}
             className="text-text/50 hover:text-text p-2 -mr-2 text-xl"
           >
@@ -81,21 +81,19 @@ export default function AddNetworkQR({ onClose }: Props) {
         <div className="flex gap-2 mb-4">
           <button
             onClick={() => setTab('receive')}
-            className={`flex-1 py-2 px-3 rounded-xl text-sm font-medium transition-colors ${
-              tab === 'receive' 
-                ? 'bg-primary text-white' 
+            className={`flex-1 py-2 px-3 rounded-xl text-sm font-medium transition-colors ${tab === 'receive'
+                ? 'bg-primary text-white'
                 : 'bg-background text-text/60 hover:text-text'
-            }`}
+              }`}
           >
             Receive MATIC
           </button>
           <button
             onClick={() => setTab('network')}
-            className={`flex-1 py-2 px-3 rounded-xl text-sm font-medium transition-colors ${
-              tab === 'network' 
-                ? 'bg-primary text-white' 
+            className={`flex-1 py-2 px-3 rounded-xl text-sm font-medium transition-colors ${tab === 'network'
+                ? 'bg-primary text-white'
                 : 'bg-background text-text/60 hover:text-text'
-            }`}
+              }`}
           >
             Add Network
           </button>
@@ -104,14 +102,14 @@ export default function AddNetworkQR({ onClose }: Props) {
         {tab === 'receive' ? (
           <>
             <p className="text-text/60 text-sm mb-4 text-center">
-              Scan this QR with MetaMask or any wallet to send MATIC to your InvisibleRail wallet
+              Scan this QR with MetaMask or any wallet to send MATIC to your Onyx wallet
             </p>
 
             <div className="flex justify-center mb-4">
               <div className="bg-white p-4 rounded-2xl">
-                <QRCodeSVG 
-                  value={walletQR} 
-                  size={180} 
+                <QRCodeSVG
+                  value={walletQR}
+                  size={180}
                   level="H"
                   includeMargin={true}
                 />
@@ -126,7 +124,7 @@ export default function AddNetworkQR({ onClose }: Props) {
               </p>
             </div>
 
-            <button 
+            <button
               onClick={copyAddress}
               className="btn-secondary w-full mb-3"
             >
@@ -134,9 +132,9 @@ export default function AddNetworkQR({ onClose }: Props) {
             </button>
 
             {/* Faucet link */}
-            <a 
-              href="https://faucet.polygon.technology/" 
-              target="_blank" 
+            <a
+              href="https://faucet.polygon.technology/"
+              target="_blank"
               rel="noopener noreferrer"
               className="btn-primary w-full text-center block"
             >
@@ -181,7 +179,7 @@ export default function AddNetworkQR({ onClose }: Props) {
               </div>
             </div>
 
-            <button 
+            <button
               onClick={handleAddNetwork}
               className="btn-primary w-full mb-3"
             >

@@ -14,13 +14,12 @@ export async function connectDB(): Promise<Db> {
     await client.connect();
     db = client.db(MONGODB_DB_NAME);
     console.log('✅ Connected to MongoDB');
-    
+
     // Create indexes
     await db.collection('users').createIndex({ username: 1 }, { unique: true });
     await db.collection('credentials').createIndex({ visibleId: 1 }, { unique: true });
-    await db.collection('credentials').createIndex({ visibleId: 1 });
     await db.collection('credentials').createIndex({ paymentId: 1 });
-    
+
     return db;
   } catch (error) {
     console.error('❌ MongoDB connection error:', error);

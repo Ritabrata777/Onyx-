@@ -5,13 +5,13 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'InvisibleRail - Seamless Web3 Payments',
+  title: 'Onyx - Seamless Web3 Payments',
   description: 'Pay with stablecoins as easily as UPI. No seed phrases, no gas fees, no complexity.',
   manifest: '/manifest.json',
   appleWebApp: {
     capable: true,
     statusBarStyle: 'black-translucent',
-    title: 'InvisibleRail',
+    title: 'Onyx',
   },
 };
 
