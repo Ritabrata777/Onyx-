@@ -45,7 +45,6 @@ router.get('/info/:address', async (req, res) => {
   try {
     const { address } = req.params;
 
-<<<<<<< HEAD
     // Find credential by wallet address using the store helper
     const cred = await credentialStore.findByWalletAddress(address);
     if (!cred) {
@@ -56,23 +55,6 @@ router.get('/info/:address', async (req, res) => {
       address: cred.walletAddress,
       paymentId: cred.paymentId,
     };
-=======
-    // Find credential by wallet address
-    let walletInfo = null;
-    for (const [, cred] of credentialStore.entries()) {
-      if (cred.walletAddress === address) {
-        walletInfo = {
-          address: cred.walletAddress,
-          paymentId: cred.paymentId,
-        };
-        break;
-      }
-    }
-
-    if (!walletInfo) {
-      return res.status(404).json({ error: 'Wallet not found' });
-    }
->>>>>>> 60d4b10 (Deploy backend to Hugging Face Space)
 
     res.json(walletInfo);
   } catch (error: any) {
