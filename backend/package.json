@@ -16,12 +16,8 @@
     "next": "14.2.35",
     "permissionless": "0.1.18",
     "uuid": "9.0.1",
-<<<<<<< HEAD
     "viem": "^2.43.5",
     "mongodb": "^5.9.0"
-=======
-    "viem": "^2.43.5"
->>>>>>> 60d4b10 (Deploy backend to Hugging Face Space)
   },
   "devDependencies": {
     "@types/cors": "2.8.17",
